@@ -13,9 +13,9 @@ public class CommandDemoLambda {
 //        lightSwitch.storeAndExecute(() -> light.on());
 //        lightSwitch.storeAndExecute(() -> light.off());
 
-        // No need for Invoker; behavior pass directly to receiver
+        // No need for concrete commands; behavior pass directly to receiver
         lightSwitch.storeAndExecute(light::on);
-        lightSwitch.storeAndExecute(light::on);
+        lightSwitch.storeAndExecute(light::off);
 
     }
 }

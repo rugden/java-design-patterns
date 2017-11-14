@@ -1,5 +1,6 @@
 package com.rugden.patterns.examples.behavioral.command;
 
+//concrete command
 public class OffCommand implements Command {
 
     private Light light;
