@@ -1,17 +1,17 @@
 package com.rugden.patterns.examples.creational.factory;
 
-import java.util.function.Supplier;
+import com.rugden.patterns.examples.creational.factory.ShapeFactoryLambdas.ShapeType;
 
 public class FactoryPatternDemoLamda {
 
 
     public static void main(String[] args) {
-        Supplier<ShapeFactory> shapeFactory = ShapeFactory::new;
-
         //call draw method of circle
-        shapeFactory.get().getShape("circle").draw();
+        Shape shape1 = ShapeFactoryLambdas.createShape(ShapeType.CIRCLE);
+        shape1.draw();
 
         //call draw method of Rectangle
-        shapeFactory.get().getShape("rectangle").draw();
+        Shape shape2 = ShapeFactoryLambdas.createShape(ShapeType.RECTANGLE);
+        shape2.draw();
     }
 }

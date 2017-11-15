@@ -1,23 +1,30 @@
 package com.rugden.patterns.examples.creational.factory;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.function.Supplier;
 
 public class ShapeFactoryLambdas {
 
-    final static Map<String, Supplier<Shape>> map = new HashMap<>();
+    /**
+     * Interface Supplier<T>: This is a functional interface and can
+     * therefore be used as the assignment target
+     * for a lambda expression or method reference.
+     */
+    public static enum ShapeType {
+        CIRCLE(Circle::new),
+        RECTANGLE(Rectangle::new);
 
-    static {
-        map.put("CIRCLE", Circle::new);
-        map.put("RECTANGLE", Rectangle::new);
+        private final Supplier<Shape> constructor;
+
+        ShapeType(Supplier<Shape> constructor) {
+            this.constructor = constructor;
+        }
+
+        public Supplier<Shape> getConstructor() {
+            return constructor;
+        }
     }
 
-    public Shape getShape(String shapeType) {
-        Supplier<Shape> shape = map.get(shapeType.toUpperCase());
-        if (shape != null) {
-            return shape.get();
-        }
-        throw new IllegalArgumentException("No such shape " + shapeType.toUpperCase());
+    public static Shape createShape(ShapeType type) {
+        return type.getConstructor().get();
     }
 }
