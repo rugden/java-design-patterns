@@ -14,17 +14,5 @@ public class CommandDemo {
         lightSwitch.storeAndExecute(onCommand);
         lightSwitch.storeAndExecute(offCommand);
 
-        //************* Lamda's time *************//
-        //behavior passed around as function
-
-        //        lightSwitch.storeAndExecute(new OnCommand(light));
-        //        lightSwitch.storeAndExecute(new OffCommand(light));
-        //
-        //        lightSwitch.storeAndExecute(() -> light.on());
-        //        lightSwitch.storeAndExecute(() -> light.off());
-
-        //        lightSwitch.storeAndExecute(light::on);
-        //        lightSwitch.storeAndExecute(light::on);
-
     }
 }
