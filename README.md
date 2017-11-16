@@ -3,4 +3,4 @@
 - Command 
 - Factory
 
-[Powerpoint Slides](GOF_Design_Patterns.pptx)
+[Accompanying Powerpoint Slides](GOF_Design_Patterns.pptx)
