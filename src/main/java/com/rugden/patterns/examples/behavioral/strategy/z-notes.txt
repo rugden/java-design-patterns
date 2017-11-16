@@ -1,0 +1,31 @@
+#Strategy Demo with lambdas
+//TaxStrategyDemoLambda
+ public static void main(String[] args) {
+
+        List<TaxStrategy> taxStrategyList =
+                Arrays.asList(
+                        TaxStrategy.personalTaxStrategy(),
+                        TaxStrategy.businessTaxStrategy()
+                );
+
+        //Calculate Tax for different scenarios with corresponding strategies
+        taxStrategyList.forEach(
+                (strategy) -> System.out.println(strategy.calculateTax(60000))
+        );
+    }
+
+
+//TaxStrategy; add to functional interface
+static TaxStrategy personalTaxStrategy() {
+        return (income) -> {
+            System.out.println("PersonalTax");
+            return 0.30 * income;
+        };
+    }
+
+    static TaxStrategy businessTaxStrategy() {
+        return (income) -> {
+            System.out.println("BusinessTax");
+            return 0.40 * income;
+        };
+    }

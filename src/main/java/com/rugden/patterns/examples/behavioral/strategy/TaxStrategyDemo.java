@@ -9,14 +9,18 @@ public class TaxStrategyDemo {
 
         //Using Concrete classes to encapsulate tax calculation algorithm
         TaxStrategy personalTax = new PersonalTaxStrategy();
-        TaxStrategy personalTaxPenalty = new PersonalTaxPenaltyStrategy();
+        TaxStrategy businessTax = new BusinessTaxStrategy();
 
         //Create a List of Tax strategies for different scenarios
-        List<TaxStrategy> taxStrategyList = Arrays.asList(personalTax, personalTaxPenalty);
+        List<TaxStrategy> taxStrategyList = Arrays.asList(personalTax, businessTax);
 
         //Calculate Tax for different scenarios with corresponding strategies
         for (TaxStrategy taxStrategy : taxStrategyList) {
             System.out.println(taxStrategy.calculateTax(30000.0));
         }
+
+        /**
+         * With Lambdas?
+         */
     }
 }
