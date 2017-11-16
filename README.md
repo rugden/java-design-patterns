@@ -5,4 +5,4 @@ Lambda-enabled design patterns examples
 - Command 
 - Factory
 
-[Powerpoint Slides](GOF%20and%20Design%20Patterns.pptx)
+[Powerpoint Slides](GOF_Design_Patterns.pptx)
