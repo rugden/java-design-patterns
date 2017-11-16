@@ -5,13 +5,13 @@ import java.util.function.Supplier;
 public class ShapeFactoryLambdas {
 
     /**
-     * Interface Supplier<T>: This is a functional interface and can
-     * therefore be used as the assignment target
-     * for a lambda expression or method reference.
+     * Interface Supplier<T>: This is a functional interface and can therefore be used as the
+     * assignment target for a lambda expression or method reference.
      */
     public static enum ShapeType {
-        CIRCLE(Circle::new),
-        RECTANGLE(Rectangle::new);
+
+        //Enum values hold references to the new method
+        CIRCLE(Circle::new), RECTANGLE(Rectangle::new);
 
         private final Supplier<Shape> constructor;
 

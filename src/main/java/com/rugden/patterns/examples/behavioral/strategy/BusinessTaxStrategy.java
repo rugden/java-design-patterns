@@ -1,8 +1,6 @@
 package com.rugden.patterns.examples.behavioral.strategy;
 
-/**
- * late tax payment which incurs a penalty
- */
+//Concrete Strategy
 public class BusinessTaxStrategy implements TaxStrategy {
 
     @Override

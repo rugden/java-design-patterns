@@ -1,12 +1,7 @@
 package com.rugden.patterns.examples.behavioral.strategy;
 
-/**
- * normal income tax
- */
+//Concrete Strategy
 public class PersonalTaxStrategy implements TaxStrategy {
-
-    public PersonalTaxStrategy() {
-    }
 
     @Override
     public double calculateTax(double income) {

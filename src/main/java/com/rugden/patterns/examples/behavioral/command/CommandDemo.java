@@ -13,10 +13,5 @@ public class CommandDemo {
         Command offCommand = new OffCommand(light);
         lightSwitch.storeAndExecute(onCommand);
         lightSwitch.storeAndExecute(offCommand);
-
-        /**
-         * Refactored with Lambdas?
-         */
-
     }
 }
