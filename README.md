@@ -1,6 +1,4 @@
-# java-design-patterns
-
-Lambda-enabled design patterns examples
+# Lambda-enabled design patterns examples
 - Strategy 
 - Command 
 - Factory
