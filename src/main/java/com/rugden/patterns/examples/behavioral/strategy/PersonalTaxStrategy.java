@@ -12,8 +12,6 @@ public class PersonalTaxStrategy implements TaxStrategy {
     public double calculateTax(double income) {
 
         System.out.println("PersonalTax");
-
-        double tax = income * 0.3;
-        return tax;
+        return income * 0.3;
     }
 }

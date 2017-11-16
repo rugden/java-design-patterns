@@ -15,12 +15,9 @@ public class TaxStrategyDemo {
         List<TaxStrategy> taxStrategyList = Arrays.asList(personalTax, businessTax);
 
         //Calculate Tax for different scenarios with corresponding strategies
+
         for (TaxStrategy taxStrategy : taxStrategyList) {
             System.out.println(taxStrategy.calculateTax(30000.0));
         }
-
-        /**
-         * With Lambdas?
-         */
     }
 }
